@@ -2,7 +2,7 @@
 
 Name:     abiquo-am
 Version: 1.7
-Release: 2%{?dist}%{?buildstamp}
+Release: 3%{?dist}%{?buildstamp}
 Summary:  Abiquo Appliance Manager
 Group:    Development/System 
 License:  Multiple 
@@ -10,6 +10,7 @@ URL:      http://www.abiquo.com
 Source0:  %{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires: abiquo-core
+BuildArch: noarch
 
 %description
 Next Generation Cloud Management Solution
@@ -25,11 +26,12 @@ Make sure that you read the license agrements in /usr/share/doc/abiquo-core lice
 
 %build
 
-
 %install
 rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/%{abiquo_basedir}/tomcat/webapps/
 mkdir -p $RPM_BUILD_ROOT/%{_docdir}/%{name}
+chmod +rw WEB-INF -R
+chmod +rw META-INF -R
 cp -r . $RPM_BUILD_ROOT/%{abiquo_basedir}/tomcat/webapps/am/
 
 %clean
@@ -45,6 +47,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Dec 14 2010 Sergio Rubio <rubiojr@frameos.org> - 1.7-3
+- remove libs from WAR
+
 * Tue Dec 14 2010 Sergio Rubio <srubio@abiquo.com> - 1.7-2
 - updated to use the new WAR packaging system
 
