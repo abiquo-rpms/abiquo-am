@@ -9,7 +9,6 @@ task :update_war,:war_name,:release,:release_dir do |t, args|
   Dir.mkdir dir
   Dir.chdir dir
   `unzip ../#{war_name}.war`
-  `mv WEB-INF/lib/*.jar #{cdir}/../abiquo-tomcat-libs/` 
   Dir.chdir cdir
   `tar czf #{dir}.tar.gz #{dir}`
   `rm -rf #{dir} #{war_name}.war`
