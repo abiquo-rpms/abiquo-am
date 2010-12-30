@@ -1,6 +1,5 @@
 require 'rake/rpm-utils'
 
-
 task :update_war,:war_name,:release,:release_dir do |t, args|
   war_name = args[:war_name]
   cdir = Dir.pwd
