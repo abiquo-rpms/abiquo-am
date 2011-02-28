@@ -2,7 +2,7 @@
 
 Name:     abiquo-am
 Version: 1.7
-Release:  5.GA%{?dist}%{?buildstamp}
+Release:  6%{?dist}%{?buildstamp}
 Summary:  Abiquo Appliance Manager
 Group:    Development/System 
 License:  Multiple 
@@ -40,6 +40,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Mon Feb 14 2011 Sergio Rubio <srubio@abiquo.com> - 1.7-6
+- fixed release string
+
 * Mon Jan 31 2011 Sergio Rubio <srubio@abiquo.com> - 1.7-5.GA
 - GA build
 
