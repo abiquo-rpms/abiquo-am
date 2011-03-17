@@ -1,8 +1,8 @@
 %define abiquo_basedir /opt/abiquo
 
 Name:     abiquo-am
-Version: 1.7
-Release:  6%{?dist}%{?buildstamp}
+Version: 1.7.5
+Release:  1%{?dist}%{?buildstamp}
 Summary:  Abiquo Appliance Manager
 Group:    Development/System 
 License:  Multiple 
@@ -40,6 +40,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Thu Mar 17 2011 Sergio Rubio <srubio@abiquo.com> - 1.7.5-1
+- version bump
+
 * Mon Feb 14 2011 Sergio Rubio <srubio@abiquo.com> - 1.7-6
 - fixed release string
 
