@@ -40,7 +40,7 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
-* Mon May 23 2011 Sergio Rubio <srubio@abiquo.com> - 1.8-1.20110523_1314
+* Mon May 23 2011 Sergio Rubio <srubio@abiquo.com> - 1.8-1
 - updated to 1.8
 
 * Thu Apr 14 2011 Sergio Rubio <rubiojr@frameos.org> - 1.7.6-1
