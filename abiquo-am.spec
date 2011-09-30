@@ -1,7 +1,7 @@
 %define abiquo_basedir /opt/abiquo
 
 Name:     abiquo-am
-Version:  1.8
+Version:  1.8.5
 Release:  1%{?dist}%{?buildstamp}
 Summary:  Abiquo Appliance Manager
 Group:    Development/System 
@@ -40,6 +40,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Fri Sep 30 2011 Sergio Rubio <srubio@abiquo.com> - 1.8.5-1
+- bumped version to 1.8.5
+
 * Mon May 23 2011 Sergio Rubio <srubio@abiquo.com> - 1.8-1
 - updated to 1.8
 
